@@ -1,18 +1,21 @@
 """
-This setup.py assumes that the C code has already been generated using Cython.
+Use this setup file to generate the C code.
+
+$ python maintenance-setup.py build_ext --inplace
 """
 
 from distutils.core import setup
 from distutils.extension import Extension
+from Cython.Distutils import build_ext
 
 my_ext = Extension(
         'pyvqcore',
-        ['pyvqcore.c'],
+        ['pyvqcore.pyx'],
         )
 
 setup(
         name = 'pyvqcore',
         version = '0.1',
+        cmdclass = { 'build_ext' : build_ext },
         ext_modules = [my_ext],
         )
-
