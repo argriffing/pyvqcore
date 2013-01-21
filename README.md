@@ -21,7 +21,7 @@ Installation
 ------------
 
 The easiest way to install this module is to use
-[pip](http://www.pip-installer.org/).
+[pip](http://www.pip-installer.org/)
 to install directly from github.
 
 `pip install --user https://github.com/argriffing/pyvqcore/zipball/master`
